@@ -1,0 +1,168 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn://x-artefact-rosaccreditation-ru/rdc/commons/1.0.2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Type" type="xs:string"/>
+  <xs:element name="Requisites">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="Status"/>
+        <xs:element type="xs:string" name="Section"/>
+        <xs:element type="xs:string" name="Number"/>
+        <xs:element type="xs:dateTime" name="DateReg"/>
+        <xs:element type="xs:dateTime" name="DateExpiry"/>
+        <xs:element type="xs:string" name="NoExpiry" nillable="true"/>
+        <xs:element name="BaseDeclaration">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Documents"/>
+              <xs:element type="xs:string" name="Schema"/>
+              <xs:element name="Base">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Laboratory">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="NumberReg"/>
+                    <xs:element type="xs:string" name="Name"/>
+                    <xs:element type="xs:dateTime" name="DateReg"/>
+                    <xs:element type="xs:dateTime" name="DateExpiry"/>
+                    <xs:element type="xs:string" name="Document" nillable="true"/>
+                    <xs:element type="xs:string" name="Info" nillable="true"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="Discontinued" nillable="true"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Applicant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="ApplicantType"/>
+        <xs:element type="xs:string" name="DeclarantType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApplicantUl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="OrganForm"/>
+        <xs:element type="xs:string" name="FullName"/>
+        <xs:element type="xs:string" name="ShortName" nillable="true"/>
+        <xs:element type="xs:string" name="Head"/>
+        <xs:element type="xs:string" name="HeadPost"/>
+        <xs:element type="xs:string" name="HeadText"/>
+        <xs:element name="Address">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="AddressActual"/>
+        <xs:element type="xs:string" name="Phone"/>
+        <xs:element type="xs:string" name="Fax"/>
+        <xs:element type="xs:string" name="Email"/>
+        <xs:element type="xs:string" name="Organ" nillable="true"/>
+        <xs:element type="xs:string" name="Date" nillable="true"/>
+        <xs:element type="xs:long" name="Ogrn"/>
+        <xs:element type="xs:int" name="Inn"/>
+        <xs:element type="xs:string" name="RegInfo" nillable="true"/>
+        <xs:element type="xs:string" name="Contract" nillable="true"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApplicantFl" nillable="true" type="xs:string"/>
+  <xs:element name="ApplicantAl" nillable="true" type="xs:string"/>
+  <xs:element name="ApplicantAu" nillable="true" type="xs:string"/>
+  <xs:element name="Manufacturer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="Type"/>
+        <xs:element name="ManufacturerUl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="OrganForm"/>
+              <xs:element type="xs:string" name="FullName"/>
+              <xs:element name="Address">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="AddressActual"/>
+              <xs:element type="xs:string" name="Phone"/>
+              <xs:element type="xs:string" name="Fax"/>
+              <xs:element type="xs:string" name="Email"/>
+              <xs:element type="xs:string" name="Organ" nillable="true"/>
+              <xs:element type="xs:string" name="Date" nillable="true"/>
+              <xs:element type="xs:long" name="Ogrn"/>
+              <xs:element type="xs:int" name="Inn"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="ManufacturerAl" nillable="true"/>
+        <xs:element type="xs:string" name="ManufacturerFl" nillable="true"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Product">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="DeclareType"/>
+        <xs:element type="xs:string" name="DcOriginType"/>
+        <xs:element type="xs:string" name="Name"/>
+        <xs:element type="xs:string" name="ProductInfo"/>
+        <xs:element type="xs:int" name="Okp"/>
+        <xs:element type="xs:string" name="OkpdText" nillable="true"/>
+        <xs:element type="xs:string" name="Standart" nillable="true"/>
+        <xs:element type="xs:string" name="SizeNumber"/>
+        <xs:element type="xs:string" name="DetailsShippingDocumentation" nillable="true"/>
+        <xs:element type="xs:string" name="ContractInfo" nillable="true"/>
+        <xs:element type="xs:string" name="Info"/>
+        <xs:element type="xs:string" name="PlaceMark" nillable="true"/>
+        <xs:element name="TechRegs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="TechReg"/>
+              <xs:element type="xs:string" name="TechRegInfo" nillable="true"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeclareAddInfo" nillable="true" type="xs:string"/>
+  <xs:element name="CertificationOrgan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="FullName"/>
+        <xs:element type="xs:string" name="Number"/>
+        <xs:element type="xs:dateTime" name="DateReg"/>
+        <xs:element type="xs:string" name="Organ"/>
+        <xs:element type="xs:string" name="Head"/>
+        <xs:element type="xs:string" name="AddressLegal"/>
+        <xs:element type="xs:string" name="Address"/>
+        <xs:element type="xs:string" name="Phone"/>
+        <xs:element type="xs:string" name="Fax"/>
+        <xs:element type="xs:string" name="Email"/>
+        <xs:element type="xs:string" name="Ogrn" nillable="true"/>
+        <xs:element name="Experts">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Surname"/>
+              <xs:element type="xs:string" name="Name"/>
+              <xs:element type="xs:string" name="Patronymic"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
